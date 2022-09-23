@@ -3,10 +3,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--scope 切换单例模式或非单例模式-->
-    <bean id="bookDao" class="com.pxy.dao.impl.BookDaoImpl" scope="prototype"></bean>
-    <bean id="bookService" name="service service2" class="com.pxy.service.impl.BookServiceImpl">
-        <!--ref是参照bean对应的-->
-        <property name="bookDao" ref="bookDao"/>
-    </bean>
-
+    <bean id="bookDao" class="com.pxy.dao.impl.BookDaoImpl" init-method="init" destroy-method="destroy"></bean>
+<!--    <bean id="bookService" name="service service2" class="com.pxy.service.impl.BookServiceImpl">-->
+<!--        &lt;!&ndash;ref是参照bean对应的&ndash;&gt;-->
+<!--        <property name="bookDao" ref="bookDao"/>-->
+<!--    </bean>-->
+<!--静态工厂实现bean实例化-->
+<!--<bean id="orderDao" class="com.pxy.factory.OrderDaoFactory" factory-method="getOrderDao"></bean>-->
+<!--使用实例工厂实例化bean-->
+<!--    <bean id="userFactory" class="com.pxy.factory.UserDaoFactory"></bean>-->
+<!--    <bean id="userDao" factory-method="getUserDao" factory-bean="userFactory"></bean>-->
+<!--    -->
+<!--    使用FactoryBean实现Bean实例化-->
+    <bean id="userDao" class="com.pxy.factory.UserDaoFactoryBean" init-method="init"></bean>
 </beans>
