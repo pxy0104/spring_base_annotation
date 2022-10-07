@@ -9,8 +9,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class AppForInstanceBook {
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-        BookDaoImpl orderDao = (BookDaoImpl) ctx.getBean("bookDao");
-        orderDao.save();
-        ((ClassPathXmlApplicationContext) ctx).close();
+        BookDaoImpl bookDao = (BookDaoImpl) ctx.getBean("bookDao");
+//        ((ClassPathXmlApplicationContext) ctx).registerShutdownHook();//关闭容器时用的两种操作
+        bookDao.save();
+//        ((ClassPathXmlApplicationContext) ctx).close();
+
     }
 }

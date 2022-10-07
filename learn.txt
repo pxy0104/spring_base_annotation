@@ -1,0 +1,10 @@
+依赖注入：
+    setter注入
+    构造器注入
+       分为简单类型和引用类型
+       基本数据类型与string
+       char byte short int long foloat double blooean
+       <constructor-arg/>
+
+       自动装配    autowire
+       按名称装配   byName  byType（对引用类型的装配，推荐）

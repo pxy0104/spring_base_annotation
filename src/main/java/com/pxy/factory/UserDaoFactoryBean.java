@@ -16,6 +16,5 @@ public class UserDaoFactoryBean implements FactoryBean<UserDao> {
         return UserDao.class;
     }
 
-    private void init() {
-    }
+
 }

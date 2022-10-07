@@ -8,10 +8,5 @@ public class UserDaoImpl implements UserDao {
     public void save() {
         System.out.println("user dao save...");
     }
-    public void init(){
-        System.out.println("init...");
-    }
-    public void destory(){
-        System.out.println("destory...");
-    }
+
 }
