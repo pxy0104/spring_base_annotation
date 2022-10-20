@@ -11,9 +11,11 @@ public class Test {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
         CalculatorImpl calculator = ctx.getBean(CalculatorImpl.class);
         Student student = ctx.getBean(Student.class);
-        calculator.add(1,2);
-student.talk();
-ctx.close();
+        calculator.add(1, 2);
+        student.talk();
+        ctx.close();
+
+
     }
 
 }
