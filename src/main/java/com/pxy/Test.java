@@ -9,9 +9,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Test {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
-        CalculatorImpl calculator = ctx.getBean(CalculatorImpl.class);
+//        CalculatorImpl calculator = ctx.getBean(CalculatorImpl.class);
         Student student = ctx.getBean(Student.class);
-        calculator.add(1, 2);
+
         student.talk();
         ctx.close();
 
