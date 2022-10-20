@@ -1,5 +1,5 @@
 package com.pxy.dao;
 
-public interface BookDao {
+public interface Anno {
     void save();
 }

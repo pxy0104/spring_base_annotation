@@ -1,7 +1,6 @@
 package com.pxy.dao.impl;
 
 import com.pxy.dao.BookDao;
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
 
 import java.util.List;
 
